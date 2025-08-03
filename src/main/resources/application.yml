@@ -1,0 +1,13 @@
+server:
+  port: 8083
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: order-service
+          uri: localhost:8083/login
+          predicates:
+            - Path=/api/order/**
+          filters:
+            - name: JwtAuthenticationFilter
+
