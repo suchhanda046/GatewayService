@@ -11,9 +11,10 @@ import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFac
 import org.springframework.cloud.gateway.filter.factory.GatewayFilterFactory;
 import org.springframework.http.HttpStatus;
 import io.jsonwebtoken.Claims;
+import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
-
+@Component
 public class JwtAuthenticationFilter extends AbstractGatewayFilterFactory<JwtAuthenticationFilter.Config> {
 //    private final Key key;
     Dotenv dotenv = Dotenv.load();

@@ -5,9 +5,9 @@ spring:
     gateway:
       routes:
         - id: order-service
-          uri: localhost:8083/login
+          uri: http://localhost:8084
           predicates:
-            - Path=/api/order/**
+            - Path=/order/**
           filters:
             - name: JwtAuthenticationFilter
 
